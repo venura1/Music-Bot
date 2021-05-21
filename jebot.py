@@ -18,7 +18,6 @@ import time
 from youtubesearchpython import SearchVideos
 from pyrogram import filters, Client
 from sample_config import Config
-import wget
 from youtube_dl import YoutubeDL
 from youtube_dl.utils import (
     ContentTooShortError,
@@ -116,22 +115,18 @@ async def song(client, message):
     time.time()
     if song:
         await rkp.edit("Uploading...") #ImJanindu
-        thurl = "https://telegra.ph/file/a23b8f38fde1914a4bbe9.jpg"
-        lol = wget.download(thurl)
-        pak = "a23b8f38fde1914a4bbe9.jpg"
+        lol = "./thumb.jpg"
         lel = await message.reply_audio(
                  f"{rip_data['id']}.mp3",
                  duration=int(rip_data["duration"]),
                  title=str(rip_data["title"]),
                  performer=str(rip_data["uploader"]),
-                 thumb=pak,
+                 thumb=lol,
                  caption=cap)  #JEBotZ
         await rkp.delete()
         os.system("rm -rf *.mp3")
         os.system("rm -rf *.webp")
-        os.remove(lol)
-
-    
+  
     
 @Jebot.on_message(filters.command("song") & ~filters.edited & filters.group)
 async def song(client, message):
@@ -206,20 +201,18 @@ async def song(client, message):
     time.time()
     if song:
         await rkp.edit("Uploading...") #ImJanindu
-        thurl = "https://telegra.ph/file/a23b8f38fde1914a4bbe9.jpg"
-        lol = wget.download(thurl)
-        pak = "a23b8f38fde1914a4bbe9.jpg"
+        lol = "./thumb.jpg"
         lel = await message.reply_audio(
                  f"{rip_data['id']}.mp3",
                  duration=int(rip_data["duration"]),
                  title=str(rip_data["title"]),
                  performer=str(rip_data["uploader"]),
-                 thumb=pak,
+                 thumb=lol,
                  caption=cap)  #JEBotZ
         await rkp.delete()
         os.system("rm -rf *.mp3")
         os.system("rm -rf *.webp")
-        os.remove(lol)
+ 
     
 @Jebot.on_message(filters.command("start"))
 async def start(client, message):
