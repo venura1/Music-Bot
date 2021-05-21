@@ -8,12 +8,12 @@
 
 ### Credits:
 
-[Infinity BOTs](https://t.me/Infinity_BOTs)
+- [Infinity BOTs](https://t.me/Infinity_BOTs)
 
-[Pyrogram Library](https://github.com/pyrogram/pyrogram)
+- [Pyrogram Library](https://github.com/pyrogram/pyrogram)
 
 ### Developers:
 
-[@ImJanindu](https://t.me/ImJanindu)
+- [@ImJanindu](https://t.me/ImJanindu)
 
-[@InukaASiTH](https://t.me/InukaASiTH)
+- [@InukaASiTH](https://t.me/InukaASiTH)
