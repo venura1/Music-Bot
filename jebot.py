@@ -208,8 +208,6 @@ async def song(client, message):
                  thumb=lol,
                  caption=cap)  #JEBotZ
         await rkp.delete()
-        os.system("rm -rf *.mp3")
-        os.system("rm -rf *.webp")
  
     
 @Jebot.on_message(filters.command("start"))
