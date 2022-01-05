@@ -1,19 +1,19 @@
 {
-    "name": "Song Downloader Bot",
-    "description": "A bot that can download song you want.",
-    "logo": "https://telegra.ph/file/4501aa5bd83bdcefa658d.jpg",
+    "name": "Music Bot",
+    "description": "A Song Downloader Telegram Bot.",
+    "logo": "https://telegra.ph/file/3ea6b4b08274cb7f3f474.jpg",
     "keywords": [
         "Music",
-        "Songdl",
+        "Songs",
         "Telegram Bot",
-        "JE Bots"
+        "Jaguar Bots"
     ],
-    "website": "https://infinityje.com",
-    "repository": "https://github.com/ImJanindu/Songdl-tgbot",
-    "success_url": "https://t.me/Infinity_BOTs",
+    "website": "https://github.com/ImJanindu",
+    "repository": "https://github.com/ImJanindu/Music-Bot",
+    "success_url": "https://t.me/JaguarBots",
     "env": {
-        "TG_BOT_TOKEN": {
-            "description": "You Telegram Bot Token from @BotFather",
+        "BOT_TOKEN": {
+            "description": "You Telegram Bot token from @BotFather",
             "value": ""
         },
         "API_HASH": {
@@ -29,9 +29,6 @@
     "buildpacks": [
         {
             "url": "heroku/python"
-        },
-        {
-            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
         }
     ],
     "formation": {
