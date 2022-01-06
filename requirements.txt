@@ -2,4 +2,4 @@ pyrogram
 tgcrypto
 wget
 youtube_dl
-youtubesearchpython
+youtube-search-python
