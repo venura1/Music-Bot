@@ -13,7 +13,7 @@
     "success_url": "https://t.me/JaguarBots",
     "env": {
         "BOT_TOKEN": {
-            "description": "You Telegram Bot token from @BotFather",
+            "description": "Your Telegram Bot token from @BotFather",
             "value": ""
         },
         "API_HASH": {
