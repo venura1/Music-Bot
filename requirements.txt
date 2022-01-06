@@ -1,3 +1,4 @@
 pyrogram
 tgcrypto
-requests
+wget
+youtube_dl
