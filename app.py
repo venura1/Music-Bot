@@ -41,7 +41,7 @@ async def get_songs(_, message):
     title = mio[0]["title"]
     ytid = mio[0]["id"]
     channel = mio[0]["channel"]
-    views = mio[0]["views"]
+    #views = mio[0]["views"]
     dur = mio[0]["duration"]
     tblink = f"https://img.youtube.com/vi/{ytid}/hqdefault.jpg"
     await asyncio.sleep(0.6)
@@ -67,14 +67,14 @@ async def get_songs(_, message):
         "logtostderr": False,
     }
     
-    await m.edit("Downloading")
+    await m.edit("Downloading speed could be slow. Please hold on...")
     try:
         with YoutubeDL(opts) as ytdl:
             ytdl_data = ytdl.extract_info(lenk, download=True)
     except Exception as e:
-        return await m.edit(f"Download Failed \n\n```{e}```")
+        return await m.edit(f"**Download Failed** \n\n```{e}```")
       
-    cap = f"**🎧 Title:** {title} \n\n**👀 Views:** {views} \n**🎥 Channel:** {channel} \n**⏳ Duration:** {dur}"
+    cap = f"**🎧 Title:** {title} \n**🎥 Channel:** {channel} \n**⏳ Duration:** {dur} \n\n**📮 By @JaguarBots**"
     aud = f"{ytdl_data['id']}.mp3"
     await m.edit("Uploading")
     await message.reply_audio(audio=open(aud, "rb"), 
