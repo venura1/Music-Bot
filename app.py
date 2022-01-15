@@ -1,4 +1,4 @@
-# Telegram Channel @JaguarBots
+# Telegram Channel @BotsKolla
 
 import os
 import asyncio
@@ -33,7 +33,7 @@ async def start(_, message):
 @bot.on_message(filters.text & filters.private & ~filters.command("start"))
 async def get_songs(_, message):
     query = message.text
-    m = await message.reply_text("Searching", quote=True)
+    m = await message.reply_text("🔎 Searching...", quote=True)
     search = SearchVideos(f"{query}", offset=1, mode="dict", max_results=1)
     mi = search.result()
     mio = mi["search_result"]
