@@ -19,9 +19,9 @@ Hi **{}** 👋
 
 Just send me a song name and I'll send the audio to you on Telegram.
 
-__Follow dev on github [@ImJanindu](https://github.com/ImJanindu)__
+__Made with ❤️ in Sri Lanka 🇱🇰__
 
-__A part of **@JaguarBots**__
+__🎯 A project of **@BotsKolla**__
 """
 
 @bot.on_message(filters.command("start") & filters.private)
@@ -67,16 +67,16 @@ async def get_songs(_, message):
         "logtostderr": False,
     }
     
-    await m.edit("Downloading speed could be slow. Please hold on...")
+    await m.edit("😔 Downloading speed could be slow. Please hold on...")
     try:
         with YoutubeDL(opts) as ytdl:
             ytdl_data = ytdl.extract_info(lenk, download=True)
     except Exception as e:
         return await m.edit(f"**Download Failed** \n\n```{e}```")
       
-    cap = f"**🎧 Title:** {title} \n**🎥 Channel:** {channel} \n**⏳ Duration:** {dur} \n\n**📮 By @JaguarBots**"
+    cap = f"**🎧 Title:** {title} \n**🎥 Channel:** {channel} \n**⏳ Duration:** {dur} \n\n**💾 Saved By @Mfsongdlbot** \n💫 Made by 𝐃𝐚𝐫𝐤 𝐇𝐞𝐫𝐨 ᳆√ 🇱🇰"
     aud = f"{ytdl_data['id']}.mp3"
-    await m.edit("Uploading")
+    await m.edit("🚀 Uploading your song")
     await message.reply_audio(audio=open(aud, "rb"), 
                               duration=int(ytdl_data["duration"]), 
                               title=str(ytdl_data["title"]), 
